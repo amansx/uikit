@@ -1,0 +1,104 @@
+.cmp-uiButton{
+	color: $UIKIT.IOSColor.color;
+}
+
+.p-sz_xs.cmp-uiButton{ 
+	min-height : 25px;
+	.cmp-uiButton_content_text{ 
+		font-size: $ButtonTypography.xsSZ;
+		&:before, &:after{
+			font-size: $ButtonTypography.xsISZ;
+		}
+	}
+}
+
+.p-sz_sm.cmp-uiButton{ 
+	min-height : 30px;
+	.cmp-uiButton_content_text{ 
+		font-size: $ButtonTypography.size; 
+		&:before, &:after{
+			font-size: $ButtonTypography.isize;
+		}
+	}
+}
+
+.p-sz_md.cmp-uiButton{ 
+	min-height : 35px;
+	.cmp-uiButton_content_text{ 
+		font-size: $ButtonTypography.mdSZ;
+		&:before, &:after{
+			font-size: $ButtonTypography.mdISZ;
+		}
+	}
+}
+
+.p-sz_lg.cmp-uiButton{ 
+	min-height : 38px;
+	.cmp-uiButton_content_text{ 
+		font-size: $ButtonTypography.szLG;
+		&:before, &:after{
+			font-size: $ButtonTypography.lgISZ;
+		}
+	}
+}
+
+.p-sz_xl.cmp-uiButton{ 
+	min-height : 40px;
+	.cmp-uiButton_content_text{ 
+		font-size: $ButtonTypography.szXL;
+		&:before, &:after{
+			font-size: $ButtonTypography.xlISZ;
+		}
+	}
+}
+
+
+.cmp-uiButton.p-typ_text{
+	color: black;
+	.cmp-uiButton_content_text{ 
+		font-family    : $ButtonTypography.family;
+		letter-spacing : $ButtonTypography.letterSpacing;
+	}
+}
+
+// Button Group
+.cmp-btnGroup{ 
+	.cmp-uiButton{
+		box-shadow: inset 0 0 0 1px $UIKIT.IOSColor.color;
+		border-radius: 3px;
+		margin: 5px;
+	}
+}
+
+
+
+// Animations
+.cmp-uiButton.p-animate_ring:hover .cmp-uiButton_content_text:before,
+.cmp-uiButton.p-animate_ring:hover .cmp-uiButton_content_text:after { 
+	animation: ring 4s 0s ease-in-out; 
+}
+
+.cmp-uiButton.p-animate_rotate:hover .cmp-uiButton_content_text:before,
+.cmp-uiButton.p-animate_rotate:hover .cmp-uiButton_content_text:after { 
+	animation: rotate 1s 0s ease-in-out; 
+}
+
+.cmp-uiButton.p-animate_bounce:hover .cmp-uiButton_content_text:before,
+.cmp-uiButton.p-animate_bounce:hover .cmp-uiButton_content_text:after { 
+	animation: bounce 0.5s 0s linear;
+}
+
+.cmp-uiButton.p-animate_pulsate:hover .cmp-uiButton_content_text:before,
+.cmp-uiButton.p-animate_pulsate:hover .cmp-uiButton_content_text:after { 
+	animation: pulsate 0.8s 0s linear infinite;
+}
+
+.cmp-uiButton.p-animate_shake:hover .cmp-uiButton_content_text:before,
+.cmp-uiButton.p-animate_shake:hover .cmp-uiButton_content_text:after { 
+	animation: shake 0.8s 0s linear;
+}
+
+.cmp-uiButton.p-animate_tada:hover .cmp-uiButton_content_text:before,
+.cmp-uiButton.p-animate_tada:hover .cmp-uiButton_content_text:after { 
+	animation: tada 0.8s 0s linear;
+}

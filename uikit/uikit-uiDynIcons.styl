@@ -1,0 +1,43 @@
+.cmp-uiDynIcon.p-typ_calendar {
+	display: inline-block;
+	width: 80px; height: 80px;
+	text-align      : center;
+	display         : table;
+	font-size       : 20px;
+	
+	.cmp-uiDynIcon_week{ display: table-row; }
+	.cmp-uiDynIcon_week:before {
+		height          : 30%;
+		content         : attr(data-week);
+		display         : table-cell;
+		vertical-align  : middle;
+		color           : black;
+		font-family     : $TextTypography.family;
+		padding-bottom  : 0;
+		font-size       : 12px;
+		line-height     : 20px;
+	}
+	
+	.cmp-uiDynIcon_date{ display: table-row; }
+	.cmp-uiDynIcon_date:before {
+		font-family     : $TextTypography.family;
+		content         : attr(data-date);
+		display         : table-cell;
+		vertical-align  : middle;
+		font-size       : 40px;
+		line-height     : 20px;
+	}
+
+	.cmp-uiDynIcon_time{ display: table-row; }
+	.cmp-uiDynIcon_time:before {
+		height          : 20%;
+		font-family     : $TextTypography.titleFM;
+		color           : black;
+		content         : attr(data-time);
+		display         : table-cell;
+		vertical-align  : middle;
+		font-size       : 11px;
+		line-height     : 20px;
+	}
+
+}

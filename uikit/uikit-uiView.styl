@@ -1,0 +1,175 @@
+.cmp-uiView{
+	width  : 100%;
+	height : 100%;
+}
+
+// Navbar View
+.cmp-uiNavbarView{
+	display    : table;
+	width      : 100%;
+	
+	&_nav{
+		display: table-row;
+		&_list{
+			display: table-cell;
+			text-align: center;
+			&.p-anchor{
+				&_startLine { 
+					text-align: left; 
+				}
+				&_endLine   { 
+					text-align: right; 
+				}
+			}
+		}
+	}
+}
+
+.cmp-uiNavbarView.p-typ_fixed{
+	position: fixed;	
+}
+
+for i in (1..5){
+	for j in (0..i){
+		.cmp-uiNavbarView_nav.p-split_{i+1} .cmp-uiNavbarView_nav_list:nth-child({j}){
+			width: (100/(i+1))%;
+			color: black;
+		}
+	}
+}
+
+
+// UI Fixed Stub View
+.cmp-uiFixedStubView{
+	height: 40px;	
+}
+
+// Form Item View
+.cmp-uiFormItemView{
+	display: block;
+}
+
+.cmp-uiFormItemView.p-typ_title{
+	.cmp-uiFormItemView_text{
+		padding-top: 20px;
+		display: inline-block;
+		font-family    : $TextTypography.titleFM;
+		font-size      : $TextTypography.titleSZ;
+		line-height    : $TextTypography.titleLH;
+		letter-spacing : $TextTypography.titleLS;
+	}
+}
+
+// Dialog View
+.cmp-uiDialogView{	
+	width: 100vw; height: 100vh;
+	top: 0; left: 0;
+	position: fixed;
+	background: alpha(black, 0.2)
+	z-index: 1;
+	
+	&_content{		
+		border-radius: 3px;
+		overflow: hidden;
+		display: block;
+		width: 100%;
+		max-width: 80%;
+		height: 80%;
+		background: white;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+}
+
+.p-typ_fullHeight.cmp-uiDialogView{
+	.cmp-uiDialogView_content{
+		height: 100%;
+		margin-top: 0;
+	}
+}	
+.p-typ_fullHeightXs.cmp-uiDialogView{
+	.cmp-uiDialogView_content{
+		height: 100vh;
+		margin-top: 0;
+		max-width: 500px;
+	}
+}	
+
+// Message View
+.cmp-uiMessageView.p-withNav{ height: calc(100% - 40px); }
+
+.cmp-uiMessageView{
+	display: block;
+	height: 100%;
+	overflow-y: auto;
+	&_list{
+		display: table;
+		&_item{
+			display: table-row;
+			&_icon{
+				vertical-align: top;
+				display: table-cell;
+			}
+			&_text{
+				vertical-align : top;
+				display        : table-cell;
+				font-family    : $TextTypography.family;
+				font-size      : $TextTypography.size;
+				line-height    : $TextTypography.lineHeight;
+				letter-spacing : $TextTypography.letterSpacing;
+			}
+		}
+	}
+}
+
+
+// Text View
+.cmp-uiTextView{
+	display        : inline-block;
+	font-size      : $TextTypography.size;
+	font-family    : $TextTypography.family;
+	line-height    : $TextTypography.lineHeight;
+	letter-spacing : $TextTypography.letterSpacing;
+}
+.cmp-uiTextView.p-caption{
+	font-size      : $TextTypography.captionSZ;
+	font-family    : $TextTypography.captionFM;
+	line-height    : $TextTypography.captionLH;
+	letter-spacing : $TextTypography.captionLS;
+}
+.cmp-uiTextView.p-title{
+	font-size      : $TextTypography.titleSZ;
+	font-family    : $TextTypography.titleFM;
+	line-height    : $TextTypography.titleLH;
+	letter-spacing : $TextTypography.titleLS;
+}
+.cmp-uiTextView.p-body{
+	font-size      : $TextTypography.bodySZ;
+	font-family    : $TextTypography.bodyFM;
+	line-height    : $TextTypography.bodyLH;
+	letter-spacing : $TextTypography.bodyLS;
+}
+.cmp-uiTextView.p-heading{
+	font-size      : $TextTypography.headingSZ;
+	font-family    : $TextTypography.headingFM;
+	line-height    : $TextTypography.headingLH;
+	letter-spacing : $TextTypography.headingLS;
+}
+.cmp-uiTextView.p-subHeading{
+	font-size      : $TextTypography.subHeadingSZ;
+	font-family    : $TextTypography.subHeadingFM;
+	line-height    : $TextTypography.subHeadingLH;
+	letter-spacing : $TextTypography.subHeadingLS;
+}
+.cmp-uiTextView.p-headline{
+	font-size      : $TextTypography.headlineSZ;
+	font-family    : $TextTypography.headlineFM;
+	line-height    : $TextTypography.headlineLH;
+	letter-spacing : $TextTypography.headlineLS;
+}
+
+
+// Property
+.hidden{
+	display: none;
+}

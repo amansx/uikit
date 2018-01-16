@@ -1,0 +1,44 @@
+body{
+	background: $UIKIT.IOSColor.nav;
+}
+
+.cmp-uiView{
+	background: $UIKIT.IOSColor.view;
+}
+
+.cmp-uiNavbarView{
+	background: $UIKIT.IOSColor.nav;
+	border-bottom: 1px $UIKIT.IOSColor.navBorderBottom solid;
+}
+
+.cmp-uiFormItemView{
+	background: white;
+	padding: 5px;
+	border-bottom: 1px $UIKIT.IOSColor.formBorderBottom solid;
+}
+.cmp-uiFormItemView.p-typ_title{
+	background: transparent;
+}
+
+.cmp-uiDialogView{
+	&_content{
+		@extends .PaperShadow;
+	}
+}
+
+// Message View
+.cmp-uiMessageView{
+	&_list{
+		&_item{			
+			&_icon{
+				padding: 10px 0 0 10px;
+				border-bottom: 1px $UIKIT.IOSColor.formBorderBottom solid;
+			}
+			&_text{
+				padding: 10px 15px 10px 10px;
+				@extends .cmp-uiTextView.p-body;
+				border-bottom: 1px $UIKIT.IOSColor.formBorderBottom solid;
+			}
+		}
+	}
+}

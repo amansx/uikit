@@ -1,0 +1,50 @@
+// Grid BG
+for size in (1..5){
+	.use-grid{size*10}x{size*10}A{
+		@extends .__uikit-color_gridRed;
+		background-size: size * 10px size * 10px;
+	}
+	.use-grid{size*10}x{size*10}B{
+		@extends .__uikit-color_gridBlue;
+		background-size: size * 10px size * 10px;
+	}
+}
+
+// Views Debug
+// UI View
+.cmp-uiView{ background: alpha($UIKIT.Color.Sunflower, 0.2) }
+
+// Navbar View	
+.cmp-uiNavbarView{ background: alpha($UIKIT.Color.Gray, 0.2) }
+.cmp-uiNavbarView{
+	&_nav{		
+		&_list{
+			box-shadow: inset 0 0 0 1px green;
+			li{
+				box-shadow: inset 0 0 0 1px black;
+			}
+		}
+	}
+}
+
+// UI Fixed Stub View
+.cmp-uiFixedStubView{
+	box-shadow: inset 0 0 0 1px black;
+	background: alpha(gray, 0.2);
+}
+
+// Form Item View
+.cmp-uiFormItemView{
+	box-shadow: inset 0 0 0 1px alpha(blue, 0.8);
+	background: alpha(blue, 0.15);
+}
+
+.cmp-uiFormItemView.p-typ_title{
+	box-shadow: inset 0 0 0 1px alpha(blue, 0.3);
+	background: alpha(blue, 0.2);
+}
+
+
+// Buttons Debug
+// Regular Button
+.cmp-uiButton{ box-shadow: inset 0 0 0 1px red; }
