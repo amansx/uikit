@@ -1,11 +1,10 @@
 {
-  "name": "uikit",
+  "name": "uikit-stylus",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "stylus -I ./node_modules/ -w examples -o dist/examples.css",
-    "build": "stylus -I ./node_modules/ -w examples -o dist/examples.css"
+    "watch": "stylus -I ./node_modules/ -w examples -o dist/examples.css"
   },
   "keywords": [],
   "author": "",
